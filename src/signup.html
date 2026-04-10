@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - JVK Foods</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" class="logo" alt="JVK Foods Logo"></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="login.html">Menu</a></li>
+            <li><a href="login.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="auth-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="icon-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <p>&copy; 2025 JVK Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Toggle navigation for mobile
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        // Handle signup form submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Simple client-side validation
+            if (name && email && password && confirmPassword) {
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match. Please try again.');
+                    return;
+                }
+
+                // Check if user already exists
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                const existingUser = users.find(u => u.email === email);
+
+                if (existingUser) {
+                    alert('An account with this email already exists. Please login instead.');
+                    return;
+                }
+
+                // Save user to localStorage (simulating a database)
+                users.push({ name, email, password });
+                localStorage.setItem('users', JSON.stringify(users));
+
+                alert('Account created successfully! You can now login.');
+                // Redirect to login page
+                window.location.href = 'login.html';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>

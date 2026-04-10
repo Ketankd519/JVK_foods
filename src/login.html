@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JVK Foods</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" class="logo" alt="JVK Foods Logo"></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="login.html">Menu</a></li>
+            <li><a href="login.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="auth-container">          
+            <h2>Login</h2>   
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="auth-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="icon-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <p>&copy; 2025 JVK Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Toggle navigation for mobile
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve users from localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Check if user exists and password matches
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if (user) {
+                alert(`Welcome back, ${user.name}!`);  
+                window.location.href = 'menu.html';
+                // Here you could redirect to a dashboard or home page
+                // For now, just show a success message
+            } else {
+                alert('Invalid email or password. Please try again or sign up if you don\'t have an account.');
+            }
+        });
+    </script>
+</body>
+</html>

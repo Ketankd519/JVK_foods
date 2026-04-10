@@ -145,7 +145,7 @@ header
 .sci li a:hover
 {
     transform: translateY(-5px);
-    color: blue;
+    color: #000099;
 }
 .previewNext
 {

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JVK Foods - Menu</title>
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" class="logo" alt="JVK Foods Logo">
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h1 class="menu-title">Our <span class="script">Menu</span></h1>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="../images/vadapav.png" alt="Vada Pav">
+                <h3>Vada Pav</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 30.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/DabaliRB.png" alt="Bhajee Pav">
+                <h3>Dabali</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 35.00</div>
+            </div> 
+             <div class="menu-card">
+                <img src="../images/ButterMisalPav.png" alt="Butter Misal Pav">
+                <h3>Butter Misal Pav</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">₹ 110.00</div>
+            </div>
+              <div class="menu-card">
+                <img src="../images/bhajee_pav.jpeg" alt="Bhajee Pav">
+                <h3>Bhajee Pav</h3>
+                <div class="rating">★★★☆☆</div>
+                <div class="price">₹ 45.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/choleBhature.png" alt="Chole Bhature">
+                <h3>Chole Bhature</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">₹ 80.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/Dalpakwan.jpg" alt="Misal Pav">
+                <h3>Dal Pakwan</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 60.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/keemaRoll.png" alt="Keema Roll">
+                <h3>Keema Roll</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">₹ 120.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/KachoriRB.png" alt="Bhajee Pav">
+                <h3>Kachori </h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">₹ 45.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/SamosaRB.png" alt="Bhajee Pav">
+                <h3>Samosa</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 35.00</div>
+            </div>
+            <div class="menu-card">
+                <img src="../images/Sambhar_wadaRB.png" alt="Bhajee Pav">
+                <h3>Crispy Medu-vada</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 65.00</div>
+            </div> 
+            <div class="menu-card">
+                <img src="../images/idli.png" alt="Bhajee Pav">
+                <h3>Soft Idli</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">₹ 45.00</div>
+            </div>
+            
+            <div class="menu-card">
+                <img src="../images/momosRB.png" alt="Bhajee Pav">
+                <h3>Steamed Momos</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">₹ 90.00</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+             <div class="social-icons">
+                <a href="#" class="icon-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <div class="contact-info">
+                <a href="#" class="icon-btn">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <span>Om nagar Jaripatka, Nagpur 440030</span>
+                </a>
+                <a href="mailto:skapekd519@gmail.com" class="icon-btn">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span>jvkfoods@gmail.com</span>
+                </a>
+                <a href="tel:937-398-7565" class="icon-btn">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span>957-875-2608</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    
+    <script>
+        // Toggle navigation for mobile
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
+

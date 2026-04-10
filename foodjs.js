@@ -6,6 +6,7 @@ menutoggle.onclick = function(){
     nevigation.classList.toggle('active')
 }
 
+//slider
 const slides = document.querySelectorAll('.slides');
 const preview = document.querySelector('.preview');
 const next = document.querySelector('.next');

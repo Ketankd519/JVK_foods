@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About JVK Foods</title>
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/logo.png" class="logo" alt="JVK Foods Logo"></a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Login</a></li>
+
+        </ul>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1><span class="highlight">JVK Foods</span></h1>
+            <p>Welcome to JVK Foods, where we bring the authentic flavors of India to your table. Our passion for traditional Indian cuisine drives us to create mouth-watering dishes that capture the essence of street food culture. From crispy Vada Pav to rich Chole Bhature, every item on our menu is crafted with love and the finest ingredients.</p>
+            <p>Founded with a vision to make Indian street food accessible and enjoyable for everyone, JVK Foods is committed to quality, taste, and customer satisfaction. Join us on this delicious journey!</p>
+        </section>
+
+        <section class="reviews">
+            <h2>What Our Customers Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <p>"JVK Foods has the best Vada Pav in town! The flavors are authentic and the service is top-notch. I come here every weekend."</p>
+                    <div class="reviewer">- Priya Sharma</div>
+                </div>
+                <div class="review-card">
+                    <p>"Absolutely love their Misal Pav! It's spicy, flavorful, and perfectly balanced. A must-try for spice lovers."</p>
+                    <div class="reviewer">- Rajesh Kumar</div>
+                </div>
+                <div class="review-card">
+                    <p>"The Chole Bhature here is heavenly! Soft, fluffy bhature paired with rich, aromatic chole. Simply irresistible."</p>
+                    <div class="reviewer">- Anjali Patel</div>
+                </div>
+                <div class="review-card">
+                    <p>"Great variety and excellent quality. Their Keema Roll is my favorite – juicy and packed with flavor!"</p>
+                    <div class="reviewer">- Vikram Singh</div>
+                </div>
+                <div class="review-card">
+                    <p>"JVK Foods never disappoints. Fresh ingredients, amazing taste, and friendly staff. Highly recommended!"</p>
+                    <div class="reviewer">- Meera Joshi</div>
+                </div>
+                <div class="review-card">
+                    <p>"The Butter Misal Pav is a game-changer! Creamy, spicy, and utterly delicious. Can't get enough of it."</p>
+                    <div class="reviewer">- Arjun Rao</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">    
+            <div class="social-icons">
+                <a href="#" class="icon-btn"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="icon-btn"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+            <p>&copy; 2025 JVK Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // Toggle navigation for mobile
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
